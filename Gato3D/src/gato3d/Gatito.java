@@ -351,6 +351,7 @@ public class Gatito extends javax.swing.JFrame {
                     escribir.write(" ");
                 }   //Escribimos en el archivo con el metodo write
                 escribir.write("\n");
+                escribir.write("holi");
                 //Cerramos la conexion
             }
         }
