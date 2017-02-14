@@ -452,7 +452,25 @@ public class Gatito extends javax.swing.JFrame {
         GuardarTxt();
         for(int i=0;i<27;i++)
             System.out.print(" "+jugadas_ganadoras[i]);
-     
+             try{
+            //vemos la jugada que gano
+            try ( //Crear objeto FileWriter que sera el que nos ayude a escribir sobre archivo
+                    FileWriter escribir = new FileWriter(archivo,true)) {
+                //vemos la jugada que gano
+                for(int i=0;i<27;i++){
+                    saludo= Integer.toString(jugadas_ganadoras[i]); //lo convierto de entero a string
+                    escribir.write(saludo);
+                    escribir.write(" ");
+                }   //Escribimos en el archivo con el metodo write
+                escribir.write("\n");
+                //Cerramos la conexion
+            }
+        }
+        //Si existe un problema al escribir cae aqui
+        catch(Exception e){
+            System.out.println("Error al escribir");
+        }
+        LeeFichero();
     }
     
     private void checar_ganador(){
