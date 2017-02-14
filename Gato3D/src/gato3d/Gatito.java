@@ -103,7 +103,6 @@ public class Gatito extends javax.swing.JFrame {
         C6 = new javax.swing.JButton();
         C3 = new javax.swing.JButton();
         C9 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -325,10 +324,6 @@ public class Gatito extends javax.swing.JFrame {
         });
         getContentPane().add(C9);
         C9.setBounds(472, 346, 41, 35);
-
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 0, 670, 420);
 
         jButton1.setText("jButton1");
         getContentPane().add(jButton1);
@@ -1285,6 +1280,5 @@ public class Gatito extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
