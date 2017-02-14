@@ -399,7 +399,34 @@ public class Gatito extends javax.swing.JFrame {
          }
       }
 }
-    
+    public void deshabilita(){
+        A1.setEnabled(false);
+        A2.setEnabled(false);
+        A3.setEnabled(false);
+        A4.setEnabled(false);
+        A5.setEnabled(false);
+        A6.setEnabled(false);
+        A7.setEnabled(false);
+        A8.setEnabled(false);
+        A9.setEnabled(false);
+        B1.setEnabled(false);
+        B2.setEnabled(false);
+        B3.setEnabled(false);
+        B4.setEnabled(false);
+        B6.setEnabled(false);
+        B7.setEnabled(false);
+        B8.setEnabled(false);
+        B9.setEnabled(false);
+        C1.setEnabled(false);
+        C2.setEnabled(false);
+        C3.setEnabled(false);
+        C4.setEnabled(false);
+        C5.setEnabled(false);
+        C6.setEnabled(false);
+        C7.setEnabled(false);
+        C8.setEnabled(false);
+        C9.setEnabled(false);
+    }
     
      
     private void guardar_ganador(){
@@ -696,6 +723,7 @@ public class Gatito extends javax.swing.JFrame {
         }
         if(f==1){
             guardar_ganador();
+            deshabilita();
         }
         
             
