@@ -86,7 +86,7 @@ public class Gatito extends javax.swing.JFrame {
         A6 = new javax.swing.JButton();
         A8 = new javax.swing.JButton();
         A3 = new javax.swing.JButton();
-        B1 = new javax.swing.JButton();
+        A10 = new javax.swing.JButton();
         B4 = new javax.swing.JButton();
         B7 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
@@ -94,7 +94,7 @@ public class Gatito extends javax.swing.JFrame {
         B3 = new javax.swing.JButton();
         B6 = new javax.swing.JButton();
         B9 = new javax.swing.JButton();
-        B2 = new javax.swing.JButton();
+        A11 = new javax.swing.JButton();
         C2 = new javax.swing.JButton();
         C7 = new javax.swing.JButton();
         C1 = new javax.swing.JButton();
@@ -104,8 +104,6 @@ public class Gatito extends javax.swing.JFrame {
         C6 = new javax.swing.JButton();
         C3 = new javax.swing.JButton();
         C9 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -182,13 +180,13 @@ public class Gatito extends javax.swing.JFrame {
         getContentPane().add(A3);
         A3.setBounds(104, 12, 41, 34);
 
-        B1.addActionListener(new java.awt.event.ActionListener() {
+        A10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B1ActionPerformed(evt);
+                A10ActionPerformed(evt);
             }
         });
-        getContentPane().add(B1);
-        B1.setBounds(189, 141, 41, 34);
+        getContentPane().add(A10);
+        A10.setBounds(189, 141, 41, 34);
 
         B4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,13 +244,13 @@ public class Gatito extends javax.swing.JFrame {
         getContentPane().add(B9);
         B9.setBounds(282, 222, 38, 31);
 
-        B2.addActionListener(new java.awt.event.ActionListener() {
+        A11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B2ActionPerformed(evt);
+                A11ActionPerformed(evt);
             }
         });
-        getContentPane().add(B2);
-        B2.setBounds(236, 141, 40, 35);
+        getContentPane().add(A11);
+        A11.setBounds(236, 141, 40, 35);
 
         C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -326,19 +324,13 @@ public class Gatito extends javax.swing.JFrame {
         getContentPane().add(C9);
         C9.setBounds(472, 346, 41, 35);
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(30, 220, 73, 23);
-
-        jButton2.setText("jButton2");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(30, 220, 73, 23);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     
     private void Compu_vs_Humano(){
+        mat[0][0]=7; mat[0][1]=4; mat[0][2]=1; mat[0][3]=6;
+        mat[1][0]=3; mat[1][1]=6; mat[1][2]=9; mat[1][3]=12;
         
     }
  //funcion, esta funcion se manda a llamar en guardar ganador 
@@ -409,8 +401,8 @@ public class Gatito extends javax.swing.JFrame {
         A7.setEnabled(false);
         A8.setEnabled(false);
         A9.setEnabled(false);
-        B1.setEnabled(false);
-        B2.setEnabled(false);
+        A10.setEnabled(false);
+        A11.setEnabled(false);
         B3.setEnabled(false);
         B4.setEnabled(false);
         B6.setEnabled(false);
@@ -882,24 +874,24 @@ public class Gatito extends javax.swing.JFrame {
         A7.setEnabled(false);
     }//GEN-LAST:event_A7ActionPerformed
 
-    private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
+    private void A10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A10ActionPerformed
         //Posicion2.1
         
        if(cont==0){
-            B1.setText("X");
+            A10.setText("X");
             cont++;
             pos[10]=1;
             jugador1[ind1++]=10;
         }
          else{
-            B1.setText("O");
+            A10.setText("O");
             cont--;
             pos[10]=2;
             jugador2[ind2++]=10;
         }
        checar_ganador();
-        B1.setEnabled(false);
-    }//GEN-LAST:event_B1ActionPerformed
+        A10.setEnabled(false);
+    }//GEN-LAST:event_A10ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
          //Posicion2.2
@@ -939,24 +931,24 @@ public class Gatito extends javax.swing.JFrame {
        B7.setEnabled(false);
     }//GEN-LAST:event_B7ActionPerformed
 
-    private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
+    private void A11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A11ActionPerformed
              //Posicion2.4
           
        if(cont==0){
-            B2.setText("X");
+            A11.setText("X");
             cont++;
             pos[11]=1;
             jugador1[ind1++]=11;
         }
          else{
-            B2.setText("O");
+            A11.setText("O");
             cont--;
             pos[11]=2;
             jugador2[ind2++]=11;
         }
           checar_ganador();
-       B2.setEnabled(false);
-    }//GEN-LAST:event_B2ActionPerformed
+       A11.setEnabled(false);
+    }//GEN-LAST:event_A11ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
               //Posicion2.5
@@ -1224,6 +1216,8 @@ public class Gatito extends javax.swing.JFrame {
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton A1;
+    private javax.swing.JButton A10;
+    private javax.swing.JButton A11;
     private javax.swing.JButton A2;
     private javax.swing.JButton A3;
     private javax.swing.JButton A4;
@@ -1232,8 +1226,6 @@ public class Gatito extends javax.swing.JFrame {
     private javax.swing.JButton A7;
     private javax.swing.JButton A8;
     private javax.swing.JButton A9;
-    private javax.swing.JButton B1;
-    private javax.swing.JButton B2;
     private javax.swing.JButton B3;
     private javax.swing.JButton B4;
     private javax.swing.JButton B6;
@@ -1249,8 +1241,6 @@ public class Gatito extends javax.swing.JFrame {
     private javax.swing.JButton C7;
     private javax.swing.JButton C8;
     private javax.swing.JButton C9;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }
