@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.*;
+import java.util.*;
 /**
  *
  * @author oriente
@@ -20,9 +21,9 @@ public class Gatito extends javax.swing.JFrame {
     int jugador2[]=new int[30];
     int ind1=0;
     int ind2=0;
-    //declaraciones
     File archivo=new File("JugadasGanadas.txt");
     String saludo=" "; //le puse saludo porque fue el de prueba xD 
+    int mat[][]=new int[205][205];
     /**
      * Creates new form Gatito
      */
@@ -342,8 +343,10 @@ public class Gatito extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    //declaraciones
-
+    
+    private void Compu_vs_Humano(){
+        
+    }
  //funcion, esta funcion se manda a llamar en guardar ganador 
     private void GuardarTxt(){
         try{
@@ -366,6 +369,8 @@ public class Gatito extends javax.swing.JFrame {
         }
         LeeFichero();
     }
+    
+    
      
     private void LeeFichero() {
         File archivo = null;
@@ -431,46 +436,12 @@ public class Gatito extends javax.swing.JFrame {
      
     private void guardar_ganador(){
         int tam=0;
-        if(pos[0]==1){ 
-            tam=ind1;
-            for(int i=0;i<27;i++){
-                if(i<tam)
-                    jugadas_ganadoras[i]=jugador1[i];
-                else
-                    jugadas_ganadoras[i]=0;
-            }
-        }
-        else {
-            tam=ind2;
-            for(int i=0;i<27;i++){
-                if(i<tam)
-                    jugadas_ganadoras[i]=jugador2[i];
-                else
-                    jugadas_ganadoras[i]=0;
-            }
+        int c=0;
+        for(int i=0;i<15;i++) {
+                jugadas_ganadoras[c++]=jugador1[i];
+                jugadas_ganadoras[c++]=jugador2[i];
         }
         GuardarTxt();
-        for(int i=0;i<27;i++)
-            System.out.print(" "+jugadas_ganadoras[i]);
-             try{
-            //vemos la jugada que gano
-            try ( //Crear objeto FileWriter que sera el que nos ayude a escribir sobre archivo
-                    FileWriter escribir = new FileWriter(archivo,true)) {
-                //vemos la jugada que gano
-                for(int i=0;i<27;i++){
-                    saludo= Integer.toString(jugadas_ganadoras[i]); //lo convierto de entero a string
-                    escribir.write(saludo);
-                    escribir.write(" ");
-                }   //Escribimos en el archivo con el metodo write
-                escribir.write("\n");
-                //Cerramos la conexion
-            }
-        }
-        //Si existe un problema al escribir cae aqui
-        catch(Exception e){
-            System.out.println("Error al escribir");
-        }
-        LeeFichero();
     }
     
     private void checar_ganador(){
