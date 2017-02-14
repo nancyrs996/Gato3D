@@ -104,7 +104,6 @@ public class Gatito extends javax.swing.JFrame {
         C6 = new javax.swing.JButton();
         C3 = new javax.swing.JButton();
         C9 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -327,18 +326,13 @@ public class Gatito extends javax.swing.JFrame {
         getContentPane().add(C9);
         C9.setBounds(472, 346, 41, 35);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/gato-siberiano-0304201402.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 0, 670, 420);
-
         jButton1.setText("jButton1");
         getContentPane().add(jButton1);
-        jButton1.setBounds(30, 220, 97, 29);
+        jButton1.setBounds(30, 220, 73, 23);
 
         jButton2.setText("jButton2");
         getContentPane().add(jButton2);
-        jButton2.setBounds(30, 220, 97, 29);
+        jButton2.setBounds(30, 220, 73, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -360,6 +354,7 @@ public class Gatito extends javax.swing.JFrame {
                     escribir.write(" ");
                 }   //Escribimos en el archivo con el metodo write
                 escribir.write("\n");
+                escribir.write("holi");
                 //Cerramos la conexion
             }
         }
@@ -1257,6 +1252,5 @@ public class Gatito extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
