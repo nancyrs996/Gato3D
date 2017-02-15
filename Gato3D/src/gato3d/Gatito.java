@@ -17,6 +17,7 @@ public class Gatito extends javax.swing.JFrame {
     int cont=0;
     int pos[]=new int[30];
     int jugadas_ganadoras[]=new int[30];
+    int total_jugadas[]=new int[30];
     int jugador1[]=new int[30];
     int jugador2[]=new int[30];
     int ind1=0;
@@ -24,6 +25,7 @@ public class Gatito extends javax.swing.JFrame {
     File archivo=new File("JugadasGanadas.txt");
     String saludo=" "; //le puse saludo porque fue el de prueba xD 
     int mat[][]=new int[205][205];
+    int t=0,maquina=0;
     /**
      * Creates new form Gatito
      */
@@ -77,261 +79,310 @@ public class Gatito extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        A1 = new javax.swing.JButton();
-        A4 = new javax.swing.JButton();
-        A9 = new javax.swing.JButton();
-        A2 = new javax.swing.JButton();
-        A5 = new javax.swing.JButton();
-        A7 = new javax.swing.JButton();
-        A6 = new javax.swing.JButton();
-        A8 = new javax.swing.JButton();
-        A3 = new javax.swing.JButton();
-        A10 = new javax.swing.JButton();
-        B4 = new javax.swing.JButton();
-        B7 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        B8 = new javax.swing.JButton();
-        B3 = new javax.swing.JButton();
-        B6 = new javax.swing.JButton();
-        B9 = new javax.swing.JButton();
-        A11 = new javax.swing.JButton();
-        C2 = new javax.swing.JButton();
-        C7 = new javax.swing.JButton();
-        C1 = new javax.swing.JButton();
-        C8 = new javax.swing.JButton();
-        C5 = new javax.swing.JButton();
-        C4 = new javax.swing.JButton();
-        C6 = new javax.swing.JButton();
-        C3 = new javax.swing.JButton();
-        C9 = new javax.swing.JButton();
+        J1 = new javax.swing.JButton();
+        J4 = new javax.swing.JButton();
+        J9 = new javax.swing.JButton();
+        J2 = new javax.swing.JButton();
+        J5 = new javax.swing.JButton();
+        J7 = new javax.swing.JButton();
+        J6 = new javax.swing.JButton();
+        J8 = new javax.swing.JButton();
+        J3 = new javax.swing.JButton();
+        J10 = new javax.swing.JButton();
+        J13 = new javax.swing.JButton();
+        J16 = new javax.swing.JButton();
+        J14 = new javax.swing.JButton();
+        J17 = new javax.swing.JButton();
+        J12 = new javax.swing.JButton();
+        J15 = new javax.swing.JButton();
+        J18 = new javax.swing.JButton();
+        J11 = new javax.swing.JButton();
+        J20 = new javax.swing.JButton();
+        J25 = new javax.swing.JButton();
+        J19 = new javax.swing.JButton();
+        J26 = new javax.swing.JButton();
+        J23 = new javax.swing.JButton();
+        J22 = new javax.swing.JButton();
+        J24 = new javax.swing.JButton();
+        J21 = new javax.swing.JButton();
+        J27 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(null);
 
-        A1.addActionListener(new java.awt.event.ActionListener() {
+        J1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A1ActionPerformed(evt);
+                J1ActionPerformed(evt);
             }
         });
-        getContentPane().add(A1);
-        A1.setBounds(2, 12, 41, 34);
+        getContentPane().add(J1);
+        J1.setBounds(2, 12, 41, 34);
 
-        A4.addActionListener(new java.awt.event.ActionListener() {
+        J4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A4ActionPerformed(evt);
+                J4ActionPerformed(evt);
             }
         });
-        getContentPane().add(A4);
-        A4.setBounds(2, 52, 41, 34);
+        getContentPane().add(J4);
+        J4.setBounds(2, 52, 41, 34);
 
-        A9.addActionListener(new java.awt.event.ActionListener() {
+        J9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A9ActionPerformed(evt);
+                J9ActionPerformed(evt);
             }
         });
-        getContentPane().add(A9);
-        A9.setBounds(104, 92, 41, 34);
+        getContentPane().add(J9);
+        J9.setBounds(104, 92, 41, 34);
 
-        A2.addActionListener(new java.awt.event.ActionListener() {
+        J2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A2ActionPerformed(evt);
+                J2ActionPerformed(evt);
             }
         });
-        getContentPane().add(A2);
-        A2.setBounds(53, 12, 41, 34);
+        getContentPane().add(J2);
+        J2.setBounds(53, 12, 41, 34);
 
-        A5.addActionListener(new java.awt.event.ActionListener() {
+        J5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A5ActionPerformed(evt);
+                J5ActionPerformed(evt);
             }
         });
-        getContentPane().add(A5);
-        A5.setBounds(53, 52, 41, 34);
+        getContentPane().add(J5);
+        J5.setBounds(53, 52, 41, 34);
 
-        A7.addActionListener(new java.awt.event.ActionListener() {
+        J7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A7ActionPerformed(evt);
+                J7ActionPerformed(evt);
             }
         });
-        getContentPane().add(A7);
-        A7.setBounds(2, 92, 41, 34);
+        getContentPane().add(J7);
+        J7.setBounds(2, 92, 41, 34);
 
-        A6.addActionListener(new java.awt.event.ActionListener() {
+        J6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A6ActionPerformed(evt);
+                J6ActionPerformed(evt);
             }
         });
-        getContentPane().add(A6);
-        A6.setBounds(104, 52, 41, 34);
+        getContentPane().add(J6);
+        J6.setBounds(104, 52, 41, 34);
 
-        A8.addActionListener(new java.awt.event.ActionListener() {
+        J8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A8ActionPerformed(evt);
+                J8ActionPerformed(evt);
             }
         });
-        getContentPane().add(A8);
-        A8.setBounds(53, 92, 41, 34);
+        getContentPane().add(J8);
+        J8.setBounds(53, 92, 41, 34);
 
-        A3.addActionListener(new java.awt.event.ActionListener() {
+        J3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A3ActionPerformed(evt);
+                J3ActionPerformed(evt);
             }
         });
-        getContentPane().add(A3);
-        A3.setBounds(104, 12, 41, 34);
+        getContentPane().add(J3);
+        J3.setBounds(104, 12, 41, 34);
 
-        A10.addActionListener(new java.awt.event.ActionListener() {
+        J10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A10ActionPerformed(evt);
+                J10ActionPerformed(evt);
             }
         });
-        getContentPane().add(A10);
-        A10.setBounds(189, 141, 41, 34);
+        getContentPane().add(J10);
+        J10.setBounds(189, 141, 41, 34);
 
-        B4.addActionListener(new java.awt.event.ActionListener() {
+        J13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B4ActionPerformed(evt);
+                J13ActionPerformed(evt);
             }
         });
-        getContentPane().add(B4);
-        B4.setBounds(189, 182, 41, 34);
+        getContentPane().add(J13);
+        J13.setBounds(189, 182, 41, 34);
 
-        B7.addActionListener(new java.awt.event.ActionListener() {
+        J16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B7ActionPerformed(evt);
+                J16ActionPerformed(evt);
             }
         });
-        getContentPane().add(B7);
-        B7.setBounds(189, 222, 41, 31);
+        getContentPane().add(J16);
+        J16.setBounds(189, 222, 41, 31);
 
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        J14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                J14ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton14);
-        jButton14.setBounds(236, 182, 40, 34);
+        getContentPane().add(J14);
+        J14.setBounds(236, 182, 40, 34);
 
-        B8.addActionListener(new java.awt.event.ActionListener() {
+        J17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B8ActionPerformed(evt);
+                J17ActionPerformed(evt);
             }
         });
-        getContentPane().add(B8);
-        B8.setBounds(236, 222, 40, 31);
+        getContentPane().add(J17);
+        J17.setBounds(236, 222, 40, 31);
 
-        B3.addActionListener(new java.awt.event.ActionListener() {
+        J12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B3ActionPerformed(evt);
+                J12ActionPerformed(evt);
             }
         });
-        getContentPane().add(B3);
-        B3.setBounds(282, 141, 41, 34);
+        getContentPane().add(J12);
+        J12.setBounds(282, 141, 41, 34);
 
-        B6.addActionListener(new java.awt.event.ActionListener() {
+        J15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B6ActionPerformed(evt);
+                J15ActionPerformed(evt);
             }
         });
-        getContentPane().add(B6);
-        B6.setBounds(282, 182, 38, 34);
+        getContentPane().add(J15);
+        J15.setBounds(282, 182, 38, 34);
 
-        B9.addActionListener(new java.awt.event.ActionListener() {
+        J18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B9ActionPerformed(evt);
+                J18ActionPerformed(evt);
             }
         });
-        getContentPane().add(B9);
-        B9.setBounds(282, 222, 38, 31);
+        getContentPane().add(J18);
+        J18.setBounds(282, 222, 38, 31);
 
-        A11.addActionListener(new java.awt.event.ActionListener() {
+        J11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                A11ActionPerformed(evt);
+                J11ActionPerformed(evt);
             }
         });
-        getContentPane().add(A11);
-        A11.setBounds(236, 141, 40, 35);
+        getContentPane().add(J11);
+        J11.setBounds(236, 141, 40, 35);
 
-        C2.addActionListener(new java.awt.event.ActionListener() {
+        J20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C2ActionPerformed(evt);
+                J20ActionPerformed(evt);
             }
         });
-        getContentPane().add(C2);
-        C2.setBounds(424, 264, 41, 35);
+        getContentPane().add(J20);
+        J20.setBounds(424, 264, 41, 35);
 
-        C7.addActionListener(new java.awt.event.ActionListener() {
+        J25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C7ActionPerformed(evt);
+                J25ActionPerformed(evt);
             }
         });
-        getContentPane().add(C7);
-        C7.setBounds(377, 346, 41, 35);
+        getContentPane().add(J25);
+        J25.setBounds(377, 346, 41, 35);
 
-        C1.addActionListener(new java.awt.event.ActionListener() {
+        J19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C1ActionPerformed(evt);
+                J19ActionPerformed(evt);
             }
         });
-        getContentPane().add(C1);
-        C1.setBounds(377, 264, 41, 35);
+        getContentPane().add(J19);
+        J19.setBounds(377, 264, 41, 35);
 
-        C8.addActionListener(new java.awt.event.ActionListener() {
+        J26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C8ActionPerformed(evt);
+                J26ActionPerformed(evt);
             }
         });
-        getContentPane().add(C8);
-        C8.setBounds(423, 346, 43, 35);
+        getContentPane().add(J26);
+        J26.setBounds(423, 346, 43, 35);
 
-        C5.addActionListener(new java.awt.event.ActionListener() {
+        J23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C5ActionPerformed(evt);
+                J23ActionPerformed(evt);
             }
         });
-        getContentPane().add(C5);
-        C5.setBounds(424, 305, 41, 35);
+        getContentPane().add(J23);
+        J23.setBounds(424, 305, 41, 35);
 
-        C4.addActionListener(new java.awt.event.ActionListener() {
+        J22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C4ActionPerformed(evt);
+                J22ActionPerformed(evt);
             }
         });
-        getContentPane().add(C4);
-        C4.setBounds(377, 305, 41, 35);
+        getContentPane().add(J22);
+        J22.setBounds(377, 305, 41, 35);
 
-        C6.addActionListener(new java.awt.event.ActionListener() {
+        J24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C6ActionPerformed(evt);
+                J24ActionPerformed(evt);
             }
         });
-        getContentPane().add(C6);
-        C6.setBounds(472, 305, 41, 35);
+        getContentPane().add(J24);
+        J24.setBounds(472, 305, 41, 35);
 
-        C3.addActionListener(new java.awt.event.ActionListener() {
+        J21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C3ActionPerformed(evt);
+                J21ActionPerformed(evt);
             }
         });
-        getContentPane().add(C3);
-        C3.setBounds(472, 264, 41, 35);
+        getContentPane().add(J21);
+        J21.setBounds(472, 264, 41, 35);
 
-        C9.addActionListener(new java.awt.event.ActionListener() {
+        J27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C9ActionPerformed(evt);
+                J27ActionPerformed(evt);
             }
         });
-        getContentPane().add(C9);
-        C9.setBounds(472, 346, 41, 35);
+        getContentPane().add(J27);
+        J27.setBounds(472, 346, 41, 35);
+
+        jButton1.setText("Turno Computadora");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(30, 310, 200, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     
-    private void Compu_vs_Humano(){
+    private void Compu_vs_humano(){
         mat[0][0]=7; mat[0][1]=4; mat[0][2]=1; mat[0][3]=6;
         mat[1][0]=3; mat[1][1]=6; mat[1][2]=9; mat[1][3]=12;
-        
+        int vec[]=new int[30];
+        vec[0]=1; vec[1]=4; vec[2]=7; vec[3]=6; vec[4]=3; vec[5]=9;  //vector temporal prueba
+        while(vec[t]!=0 && pos[vec[t]]>0)
+            t++;
+        if(vec[t]==0) { //Si ya se acabaron las jugadas, juega random
+        }
+        else { // Pon la jugada que sigue en el vector de jugadas
+            if(vec[t]==1) {  J1.setText("O"); J1.setEnabled(false); }
+            if(vec[t]==2) {  J2.setText("O"); J2.setEnabled(false); } 
+            if(vec[t]==3) {  J3.setText("O"); J3.setEnabled(false); }
+            if(vec[t]==4) {  J4.setText("O"); J4.setEnabled(false); }
+            if(vec[t]==5) {  J5.setText("O"); J5.setEnabled(false); }
+            if(vec[t]==6) {  J6.setText("O"); J6.setEnabled(false); }
+            if(vec[t]==7) {  J7.setText("O"); J7.setEnabled(false); }
+            if(vec[t]==8) {  J8.setText("O"); J8.setEnabled(false); }
+            if(vec[t]==9) {  J9.setText("O"); J9.setEnabled(false); }
+            if(vec[t]==10) {  J10.setText("O"); J10.setEnabled(false); }
+            if(vec[t]==11) {  J11.setText("O"); J11.setEnabled(false); }
+            if(vec[t]==12) {  J12.setText("O"); J12.setEnabled(false); }
+            if(vec[t]==13) {  J13.setText("O"); J13.setEnabled(false); }
+            if(vec[t]==15) {  J15.setText("O"); J15.setEnabled(false); }
+            if(vec[t]==16) {  J16.setText("O"); J16.setEnabled(false); }
+            if(vec[t]==17) {  J17.setText("O"); J17.setEnabled(false); }
+            if(vec[t]==18) {  J18.setText("O"); J18.setEnabled(false); }
+            if(vec[t]==19) {  J19.setText("O"); J19.setEnabled(false); }
+            if(vec[t]==20) {  J20.setText("O"); J20.setEnabled(false); }
+            if(vec[t]==21) {  J21.setText("O"); J21.setEnabled(false); }
+            if(vec[t]==22) {  J22.setText("O"); J22.setEnabled(false); }
+            if(vec[t]==23) {  J23.setText("O"); J23.setEnabled(false); }
+            if(vec[t]==24) {  J24.setText("O"); J24.setEnabled(false); }
+            if(vec[t]==25) {  J25.setText("O"); J25.setEnabled(false); }
+            if(vec[t]==26) {  J26.setText("O"); J26.setEnabled(false); }
+            if(vec[t]==27) {  J27.setText("O"); J27.setEnabled(false); }
+            cont--;
+            pos[vec[t]]=2;
+            jugador2[ind2++]=vec[t];
+            checar_ganador();
+            t++;
+        }
     }
  //funcion, esta funcion se manda a llamar en guardar ganador 
     private void GuardarTxt(){
@@ -346,7 +397,6 @@ public class Gatito extends javax.swing.JFrame {
                     escribir.write(" ");
                 }   //Escribimos en el archivo con el metodo write
                 escribir.write("\n");
-                escribir.write("holi");
                 //Cerramos la conexion
             }
         }
@@ -392,32 +442,32 @@ public class Gatito extends javax.swing.JFrame {
       }
 }
     public void deshabilita(){
-        A1.setEnabled(false);
-        A2.setEnabled(false);
-        A3.setEnabled(false);
-        A4.setEnabled(false);
-        A5.setEnabled(false);
-        A6.setEnabled(false);
-        A7.setEnabled(false);
-        A8.setEnabled(false);
-        A9.setEnabled(false);
-        A10.setEnabled(false);
-        A11.setEnabled(false);
-        B3.setEnabled(false);
-        B4.setEnabled(false);
-        B6.setEnabled(false);
-        B7.setEnabled(false);
-        B8.setEnabled(false);
-        B9.setEnabled(false);
-        C1.setEnabled(false);
-        C2.setEnabled(false);
-        C3.setEnabled(false);
-        C4.setEnabled(false);
-        C5.setEnabled(false);
-        C6.setEnabled(false);
-        C7.setEnabled(false);
-        C8.setEnabled(false);
-        C9.setEnabled(false);
+        J1.setEnabled(false);
+        J2.setEnabled(false);
+        J3.setEnabled(false);
+        J4.setEnabled(false);
+        J5.setEnabled(false);
+        J6.setEnabled(false);
+        J7.setEnabled(false);
+        J8.setEnabled(false);
+        J9.setEnabled(false);
+        J10.setEnabled(false);
+        J11.setEnabled(false);
+        J12.setEnabled(false);
+        J13.setEnabled(false);
+        J15.setEnabled(false);
+        J16.setEnabled(false);
+        J17.setEnabled(false);
+        J18.setEnabled(false);
+        J19.setEnabled(false);
+        J20.setEnabled(false);
+        J21.setEnabled(false);
+        J22.setEnabled(false);
+        J23.setEnabled(false);
+        J24.setEnabled(false);
+        J25.setEnabled(false);
+        J26.setEnabled(false);
+        J27.setEnabled(false);
     }
     
      
@@ -431,9 +481,11 @@ public class Gatito extends javax.swing.JFrame {
         GuardarTxt();
     }
     
-    private void checar_ganador(){
+    
+    
+    private void checar_ganador(){//todas las validaciones estan dentro del if XD
         int f=0;
-        if(pos[1]==pos[4] && pos[4]==pos[7] && pos[1]!=0){
+        if(pos[3]==pos[15] && pos[15]==pos[27]&& pos[3]!=0||pos[7]==pos[17] && pos[17]==pos[27]&& pos[7]!=0||pos[1]==pos[11] && pos[11]==pos[21]&& pos[1]!=0||pos[1]==pos[13] && pos[13]==pos[25]&& pos[1]!=0||pos[21]==pos[23] && pos[23]==pos[25]&& pos[21]!=0||pos[19]==pos[23] && pos[23]==pos[27] && pos[19]!=0||pos[21]==pos[24] && pos[24]==pos[27] && pos[21]!=0||pos[20]==pos[23] && pos[23]==pos[26] && pos[20]!=0||pos[19]==pos[22] && pos[22]==pos[25] && pos[19]!=0||pos[25]==pos[26] && pos[26]==pos[27] && pos[25]!=0||pos[22]==pos[23] && pos[23]==pos[24] && pos[22]!=0||pos[19]==pos[20] && pos[20]==pos[21] && pos[19]!=0||pos[16]==pos[17] && pos[17]==pos[18] && pos[16]!=0||pos[10]==pos[11] && pos[11]==pos[12] && pos[10]!=0||pos[12]==pos[15] && pos[15]==pos[18]&& pos[12]!=0||pos[10]==pos[13] && pos[13]==pos[16]&& pos[10]!=0||pos[3]==pos[5] && pos[5]==pos[7] && pos[3]!=0||pos[1]==pos[5] && pos[5]==pos[9] && pos[1]!=0||pos[7]==pos[8] && pos[8]==pos[9] && pos[7]!=0||pos[4]==pos[5] && pos[5]==pos[6]&& pos[4]!=0||pos[1]==pos[4] && pos[4]==pos[7] && pos[1]!=0||pos[2]==pos[5] && pos[5]==pos[8] && pos[2]!=0||pos[3]==pos[6] && pos[6]==pos[9] && pos[3]!=0||pos[1]==pos[2] && pos[2]==pos[3] && pos[1]!=0){
             f=1;
             if(cont!=0) {
                 pos[0]=1;
@@ -443,516 +495,271 @@ public class Gatito extends javax.swing.JFrame {
                 pos[0]=2;
                 JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
             }  
-        }
-        else if(pos[2]==pos[5] && pos[5]==pos[8] && pos[2]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[3]==pos[6] && pos[6]==pos[9] && pos[3]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[1]==pos[2] && pos[2]==pos[3] && pos[1]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[4]==pos[5] && pos[5]==pos[6]&& pos[4]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[7]==pos[8] && pos[8]==pos[9] && pos[7]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[1]==pos[5] && pos[5]==pos[9] && pos[1]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[3]==pos[5] && pos[5]==pos[7] && pos[3]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[10]==pos[13] && pos[13]==pos[16]&& pos[10]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[12]==pos[15] && pos[15]==pos[18]&& pos[12]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[10]==pos[11] && pos[11]==pos[12] && pos[10]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[16]==pos[17] && pos[17]==pos[18] && pos[16]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[19]==pos[20] && pos[20]==pos[21] && pos[19]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[22]==pos[23] && pos[23]==pos[24] && pos[22]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[25]==pos[26] && pos[26]==pos[27] && pos[25]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[19]==pos[22] && pos[22]==pos[25] && pos[19]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[20]==pos[23] && pos[23]==pos[26] && pos[20]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[21]==pos[24] && pos[24]==pos[27] && pos[21]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[19]==pos[23] && pos[23]==pos[27] && pos[19]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[21]==pos[23] && pos[23]==pos[25]&& pos[21]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[1]==pos[13] && pos[13]==pos[25]&& pos[1]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[1]==pos[11] && pos[11]==pos[21]&& pos[1]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[7]==pos[17] && pos[17]==pos[27]&& pos[7]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
-        else if(pos[3]==pos[15] && pos[15]==pos[27]&& pos[3]!=0){
-            f=1;
-            if(cont!=0) {
-                pos[0]=1;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó X");
-            }
-            else  {
-                pos[0]=2;
-                JOptionPane.showMessageDialog(null, "Felicidades! Ganó O");
-            }  
-        }
+        }     
+       
         if(f==1){
             guardar_ganador();
             deshabilita();
-        }
-        
-            
+        }       
     }
     
-    private void A1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A1ActionPerformed
+    private void J1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J1ActionPerformed
         // Posicion 1
         if(cont==0){
-            A1.setText("X");
+            J1.setText("X");
             cont++;
             pos[1]=1;
             jugador1[ind1++]=1;
+            checar_ganador();
+            J1.setEnabled(false);
         }
-        else{
-            A1.setText("O");
+        else{ 
+            JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J1.setText("O");
             cont--;
             pos[1]=2;
-            jugador2[ind2++]=1;
-        }
-        checar_ganador();
-        A1.setEnabled(false);
-    }//GEN-LAST:event_A1ActionPerformed
+            jugador2[ind2++]=1;*/
+        } 
+    }//GEN-LAST:event_J1ActionPerformed
 
-    private void A4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A4ActionPerformed
+    private void J4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J4ActionPerformed
         //Posicion2
         if(cont==0){
-            A4.setText("X");
+            J4.setText("X");
             cont++;
             pos[4]=1;
             jugador1[ind1++]=4;
+            checar_ganador();
+            J4.setEnabled(false);
         }
-         else{
-            A4.setText("O");
+         else{ 
+            JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J4.setText("O");
             cont--;
             pos[4]=2;
-            jugador2[ind2++]=4;
-        }
-        checar_ganador();
-        A4.setEnabled(false);
-    }//GEN-LAST:event_A4ActionPerformed
+            jugador2[ind2++]=4;*/
+        } 
+    }//GEN-LAST:event_J4ActionPerformed
 
-    private void A9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A9ActionPerformed
+    private void J9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J9ActionPerformed
         //Posicion3
         if(cont==0){
-            A9.setText("X");
+            J9.setText("X");
             cont++;
             pos[9]=1;
             jugador1[ind1++]=9;
+            checar_ganador();
+            J9.setEnabled(false);
         }
-         else{
-            A9.setText("O");
+         else{ 
+            JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J9.setText("O");
             cont--;
             pos[9]=2;
-            jugador2[ind2++]=9;
-        }
-        checar_ganador();
-        A9.setEnabled(false);
-    }//GEN-LAST:event_A9ActionPerformed
+            jugador2[ind2++]=9;*/
+        } 
+    }//GEN-LAST:event_J9ActionPerformed
 
-    private void A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A2ActionPerformed
+    private void J2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J2ActionPerformed
         // Posicion4
          if(cont==0){
-            A2.setText("X");
+            J2.setText("X");
             cont++;
             pos[2]=1;
             jugador1[ind1++]=2;
+            checar_ganador();
+            J2.setEnabled(false);
         }
-         else{
-            A2.setText("O");
+         else{ 
+            JOptionPane.showMessageDialog(null, "Es turno de la computadora"); 
+            /*J2.setText("O");
             cont--;
             pos[2]=2;
-            jugador2[ind2++]=2;
-        }
-         
-        checar_ganador();
-        A2.setEnabled(false);
-    }//GEN-LAST:event_A2ActionPerformed
+            jugador2[ind2++]=2;*/
+        } 
+    }//GEN-LAST:event_J2ActionPerformed
 
-    private void A6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A6ActionPerformed
+    private void J6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J6ActionPerformed
 
         // Posicion5
          if(cont==0){
-            A6.setText("X");
+            J6.setText("X");
             cont++;
             pos[6]=1;
             jugador1[ind1++]=6;
+            checar_ganador();
+            J6.setEnabled(false);
         }
          else{
-            A6.setText("O");
+             JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J6.setText("O");
             cont--;
             pos[6]=2;
-            jugador2[ind2++]=6;
+            jugador2[ind2++]=6; */
         }
-         
-        checar_ganador();
-         A6.setEnabled(false);
-    }//GEN-LAST:event_A6ActionPerformed
+    }//GEN-LAST:event_J6ActionPerformed
 
-    private void A8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A8ActionPerformed
+    private void J8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J8ActionPerformed
            // Posicion6
          if(cont==0){
-            A8.setText("X");
+            J8.setText("X");
             cont++;
             pos[8]=1;
             jugador1[ind1++]=8;
+            checar_ganador();
+            J8.setEnabled(false);
         }
          else{
-            A8.setText("O");
+             JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J8.setText("O");
             cont--;
             pos[8]=2;
-            jugador2[ind2++]=8;
+            jugador2[ind2++]=8;*/
         }
-         
-           checar_ganador();
-         A8.setEnabled(false);
-    }//GEN-LAST:event_A8ActionPerformed
+    }//GEN-LAST:event_J8ActionPerformed
 
-    private void A3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A3ActionPerformed
+    private void J3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J3ActionPerformed
         // Posicion7
          if(cont==0){
-            A3.setText("X");
+            J3.setText("X");
             cont++;
             pos[3]=1;
             jugador1[ind1++]=3;
+            checar_ganador();
+            J3.setEnabled(false);
         }
          else{
-            A3.setText("O");
+             JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+           /* J3.setText("O");
             cont--;
             pos[3]=2;
-            jugador2[ind2++]=3;
+            jugador2[ind2++]=3;*/
         }
-         
-        checar_ganador();
-        A3.setEnabled(false);
-    }//GEN-LAST:event_A3ActionPerformed
+    }//GEN-LAST:event_J3ActionPerformed
 
-    private void A5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A5ActionPerformed
+    private void J5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J5ActionPerformed
          // Posicion8
          
          if(cont==0){
-            A5.setText("X");
+            J5.setText("X");
             cont++;
             pos[5]=1;
             jugador1[ind1++]=5;
+            checar_ganador();
+            J5.setEnabled(false);
         }
          else{
-            A5.setText("O");
+             JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J5.setText("O");
             cont--;
             pos[5]=2;
-            jugador2[ind2++]=5;
+            jugador2[ind2++]=5;*/
         }
-         checar_ganador();
-        A5.setEnabled(false);
-    }//GEN-LAST:event_A5ActionPerformed
+    }//GEN-LAST:event_J5ActionPerformed
 
-    private void A7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A7ActionPerformed
+    private void J7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J7ActionPerformed
        
         // Posicion9
          if(cont==0){
-            A7.setText("X");
+            J7.setText("X");
             cont++;
             pos[7]=1;
             jugador1[ind1++]=7;
+            checar_ganador();
+            J7.setEnabled(false);
         }
          else{
-            A7.setText("O");
+             JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J7.setText("O");
             cont--;
             pos[7]=2;
-            jugador2[ind2++]=7;
+            jugador2[ind2++]=7;*/
         }
-         checar_ganador();
-        A7.setEnabled(false);
-    }//GEN-LAST:event_A7ActionPerformed
+    }//GEN-LAST:event_J7ActionPerformed
 
-    private void A10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A10ActionPerformed
+    private void J10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J10ActionPerformed
         //Posicion2.1
         
        if(cont==0){
-            A10.setText("X");
+            J10.setText("X");
             cont++;
             pos[10]=1;
             jugador1[ind1++]=10;
+            checar_ganador();
+            J10.setEnabled(false);
         }
          else{
-            A10.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+           /* J10.setText("O");
             cont--;
             pos[10]=2;
-            jugador2[ind2++]=10;
+            jugador2[ind2++]=10;*/
         }
-       checar_ganador();
-        A10.setEnabled(false);
-    }//GEN-LAST:event_A10ActionPerformed
+    }//GEN-LAST:event_J10ActionPerformed
 
-    private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
+    private void J13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J13ActionPerformed
          //Posicion2.2
        
        if(cont==0){
-            B4.setText("X");
+            J13.setText("X");
             cont++;
             pos[13]=1;
             jugador1[ind1++]=13;
+            checar_ganador();
+            J13.setEnabled(false);
         }
          else{
-            B4.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+          /*  J13.setText("O");
             cont--;
             pos[13]=2;
-            jugador2[ind2++]=13;
+            jugador2[ind2++]=13;*/
         }
-         checar_ganador();
-       B4.setEnabled(false);
-    }//GEN-LAST:event_B4ActionPerformed
+    }//GEN-LAST:event_J13ActionPerformed
 
-    private void B7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B7ActionPerformed
+    private void J16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J16ActionPerformed
            //Posicion2.3
          
        if(cont==0){
-            B7.setText("X");
+            J16.setText("X");
             cont++;
             pos[16]=1;
             jugador1[ind1++]=16;
+            checar_ganador();
+            J16.setEnabled(false);
         }
          else{
-            B7.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J16.setText("O");
             cont--;
             pos[16]=2;
-            jugador2[ind2++]=16;
+            jugador2[ind2++]=16;*/
         }
-         checar_ganador();
-       B7.setEnabled(false);
-    }//GEN-LAST:event_B7ActionPerformed
+    }//GEN-LAST:event_J16ActionPerformed
 
-    private void A11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A11ActionPerformed
+    private void J11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J11ActionPerformed
              //Posicion2.4
           
        if(cont==0){
-            A11.setText("X");
+            J11.setText("X");
             cont++;
             pos[11]=1;
             jugador1[ind1++]=11;
+            checar_ganador();
+            J11.setEnabled(false);
         }
          else{
-            A11.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J11.setText("O");
             cont--;
             pos[11]=2;
-            jugador2[ind2++]=11;
+            jugador2[ind2++]=11;*/
         }
-          checar_ganador();
-       A11.setEnabled(false);
-    }//GEN-LAST:event_A11ActionPerformed
+    }//GEN-LAST:event_J11ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void J14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J14ActionPerformed
               //Posicion2.5
-              jButton14.setBackground(java.awt.Color.red);
+              J14.setBackground(java.awt.Color.red);
        /*if(cont==0){
             jButton14.setText("X");
             cont++;
@@ -961,286 +768,305 @@ public class Gatito extends javax.swing.JFrame {
             jButton14.setText("O");
             cont--;
         }*/
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_J14ActionPerformed
 
-    private void B8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B8ActionPerformed
+    private void J17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J17ActionPerformed
               //Posicion2.6
               
        if(cont==0){
-            B8.setText("X");
+            J17.setText("X");
             cont++;
             pos[17]=1;
             jugador1[ind1++]=17;
+            checar_ganador();
+            J17.setEnabled(false);
         }
          else{
-            B8.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+           /* J17.setText("O");
             cont--;
             pos[17]=2;
-            jugador2[ind2++]=17;
+            jugador2[ind2++]=17;*/
         }
-       checar_ganador();
-       B8.setEnabled(false);
-    }//GEN-LAST:event_B8ActionPerformed
+    }//GEN-LAST:event_J17ActionPerformed
 
-    private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
+    private void J12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J12ActionPerformed
                //Posicion2.7
               
        if(cont==0){
-            B3.setText("X");
+            J12.setText("X");
             cont++;
             pos[12]=1;
             jugador1[ind1++]=12;
+            checar_ganador();
+            J12.setEnabled(false);
         }
          else{
-            B3.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J12.setText("O");
             cont--;
             pos[12]=2;
-            jugador2[ind2++]=12;
+            jugador2[ind2++]=12;*/
         }
-        checar_ganador();
-       B3.setEnabled(false);
-    }//GEN-LAST:event_B3ActionPerformed
+    }//GEN-LAST:event_J12ActionPerformed
 
-    private void B6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B6ActionPerformed
+    private void J15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J15ActionPerformed
                 //Posicion2.8
                 
        if(cont==0){
-            B6.setText("X");
+            J15.setText("X");
             cont++;
             pos[15]=1;
             jugador1[ind1++]=15;
+            checar_ganador();
+            J15.setEnabled(false);
         }
          else{
-            B6.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+           /* J15.setText("O");
             cont--;
             pos[15]=2;
-            jugador2[ind2++]=15;
+            jugador2[ind2++]=15;*/
         }
-       checar_ganador();
-       B6.setEnabled(false);
-    }//GEN-LAST:event_B6ActionPerformed
+    }//GEN-LAST:event_J15ActionPerformed
 
-    private void B9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B9ActionPerformed
+    private void J18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J18ActionPerformed
               //Posicion2.9
               
        if(cont==0){
-            B9.setText("X");
+            J18.setText("X");
             cont++;
             pos[18]=1;
             jugador1[ind1++]=18;
+            checar_ganador();
+            J18.setEnabled(false);
         }
          else{
-            B9.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J18.setText("O");
             cont--;
             pos[18]=2;
-            jugador2[ind2++]=18;
+            jugador2[ind2++]=18;*/
         }
-       checar_ganador();
-       B9.setEnabled(false);
-    }//GEN-LAST:event_B9ActionPerformed
+    }//GEN-LAST:event_J18ActionPerformed
 
-    private void C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C1ActionPerformed
+    private void J19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J19ActionPerformed
                //Posicion3.1
                
        if(cont==0){
-            C1.setText("X");
+            J19.setText("X");
             cont++;
             pos[19]=1;
             jugador1[ind1++]=19;
+            checar_ganador();
+            J19.setEnabled(false);
         }
          else{
-            C1.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+           /* J19.setText("O");
             cont--;
             pos[19]=2;
-            jugador2[ind2++]=19;
+            jugador2[ind2++]=19;*/
         }
-       checar_ganador();
-       C1.setEnabled(false);
-    }//GEN-LAST:event_C1ActionPerformed
+    }//GEN-LAST:event_J19ActionPerformed
 
-    private void C4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C4ActionPerformed
+    private void J22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J22ActionPerformed
                  //Posicion3.2
                  
        if(cont==0){
-            C4.setText("X");
+            J22.setText("X");
             cont++;
             pos[22]=1;
             jugador1[ind1++]=22;
+            checar_ganador();
+            J22.setEnabled(false);
         }
          else{
-            C4.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+           /* J22.setText("O");
             cont--;
             pos[22]=2;
-            jugador2[ind2++]=22;
+            jugador2[ind2++]=22;*/
         }
-       checar_ganador();
-       C4.setEnabled(false);
-    }//GEN-LAST:event_C4ActionPerformed
+    }//GEN-LAST:event_J22ActionPerformed
 
-    private void C7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C7ActionPerformed
+    private void J25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J25ActionPerformed
                     //Posicion3.3
                    
        if(cont==0){
-            C7.setText("X");
+            J25.setText("X");
             cont++;
             pos[25]=1;
             jugador1[ind1++]=25;
+            checar_ganador();
+            J25.setEnabled(false);
         }
          else{
-            C7.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+           /* J25.setText("O");
             cont--;
             pos[25]=2;
-            jugador2[ind2++]=25;
+            jugador2[ind2++]=25;*/
         }
-        checar_ganador();
-       C7.setEnabled(false);
-    }//GEN-LAST:event_C7ActionPerformed
+    }//GEN-LAST:event_J25ActionPerformed
 
-    private void C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C2ActionPerformed
+    private void J20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J20ActionPerformed
         //Posicion3.4
         
        if(cont==0){
-            C2.setText("X");
+            J20.setText("X");
             cont++;
             pos[20]=1;
             jugador1[ind1++]=20;
+            checar_ganador();
+            J20.setEnabled(false);
         }
          else{
-            C2.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J20.setText("O");
             cont--;
             pos[20]=2;
-            jugador2[ind2++]=20;
+            jugador2[ind2++]=20;*/
         }
-       checar_ganador();
-       C2.setEnabled(false);
-    }//GEN-LAST:event_C2ActionPerformed
+    }//GEN-LAST:event_J20ActionPerformed
 
-    private void C5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C5ActionPerformed
+    private void J23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J23ActionPerformed
         //Posicion3.5
         
        if(cont==0){
-            C5.setText("X");
+            J23.setText("X");
             cont++;
             pos[23]=1;
             jugador1[ind1++]=23;
+            checar_ganador();
+            J23.setEnabled(false);
         }
          else{
-            C5.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J23.setText("O");
             cont--;
             pos[23]=2;
-            jugador2[ind2++]=23;
+            jugador2[ind2++]=23;*/
         }
-       checar_ganador();
-       C5.setEnabled(false);
-    }//GEN-LAST:event_C5ActionPerformed
+    }//GEN-LAST:event_J23ActionPerformed
 
-    private void C8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C8ActionPerformed
+    private void J26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J26ActionPerformed
         // TODO add your handling code here:
         //Posicion3.6
         
        if(cont==0){
-            C8.setText("X");
+            J26.setText("X");
             cont++;
             pos[26]=1;
             jugador1[ind1++]=26;
+            checar_ganador();
+            J26.setEnabled(false);
         }
          else{
-            C8.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+            /*J26.setText("O");
             cont--;
             pos[26]=2;
-            jugador2[ind2++]=26;
+            jugador2[ind2++]=26;*/
         }
-       checar_ganador();
-       C8.setEnabled(false);
-    }//GEN-LAST:event_C8ActionPerformed
+    }//GEN-LAST:event_J26ActionPerformed
 
-    private void C3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C3ActionPerformed
+    private void J21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J21ActionPerformed
         //Posicion3.7
         
        if(cont==0){
-            C3.setText("X");
+            J21.setText("X");
             cont++;
             pos[21]=1;
             jugador1[ind1++]=21;
+            checar_ganador();
+            J21.setEnabled(false);
         }
          else{
-            C3.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+         /*   J21.setText("O");
             cont--;
             pos[21]=2;
-            jugador2[ind2++]=21;
+            jugador2[ind2++]=21;*/
         }
-       checar_ganador();
-       C3.setEnabled(false);
-    }//GEN-LAST:event_C3ActionPerformed
+    }//GEN-LAST:event_J21ActionPerformed
 
-    private void C6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C6ActionPerformed
+    private void J24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J24ActionPerformed
         //Posicion3.8
         
        if(cont==0){
-            C6.setText("X");
+            J24.setText("X");
             cont++;
             pos[24]=1;
             jugador1[ind1++]=24;
+            checar_ganador();
+            J24.setEnabled(false);
         }
          else{
-            C6.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+           /* J24.setText("O");
             cont--;
             pos[24]=2;
-            jugador2[ind2++]=24;
+            jugador2[ind2++]=24;*/
         }
-       checar_ganador();
-       C6.setEnabled(false);
-    }//GEN-LAST:event_C6ActionPerformed
+    }//GEN-LAST:event_J24ActionPerformed
 
-    private void C9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C9ActionPerformed
+    private void J27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J27ActionPerformed
         //Posicion3.9
         
        if(cont==0){
-            C9.setText("X");
+            J27.setText("X");
             cont++;
             pos[27]=1;
-            jugador1[ind1++]=27;
+            jugador1[ind1++]=27;   
+            checar_ganador();
+            J27.setEnabled(false);
         }
          else{
-            C9.setText("O");
+           JOptionPane.showMessageDialog(null, "Es turno de la computadora");
+          /*  J27.setText("O");
             cont--;
             pos[27]=2;
-            jugador2[ind2++]=27;
+            jugador2[ind2++]=27;*/
         }
-       checar_ganador();
-       C9.setEnabled(false);
-    }//GEN-LAST:event_C9ActionPerformed
+    }//GEN-LAST:event_J27ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        maquina=1;
+        Compu_vs_humano();
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     
 
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton A1;
-    private javax.swing.JButton A10;
-    private javax.swing.JButton A11;
-    private javax.swing.JButton A2;
-    private javax.swing.JButton A3;
-    private javax.swing.JButton A4;
-    private javax.swing.JButton A5;
-    private javax.swing.JButton A6;
-    private javax.swing.JButton A7;
-    private javax.swing.JButton A8;
-    private javax.swing.JButton A9;
-    private javax.swing.JButton B3;
-    private javax.swing.JButton B4;
-    private javax.swing.JButton B6;
-    private javax.swing.JButton B7;
-    private javax.swing.JButton B8;
-    private javax.swing.JButton B9;
-    private javax.swing.JButton C1;
-    private javax.swing.JButton C2;
-    private javax.swing.JButton C3;
-    private javax.swing.JButton C4;
-    private javax.swing.JButton C5;
-    private javax.swing.JButton C6;
-    private javax.swing.JButton C7;
-    private javax.swing.JButton C8;
-    private javax.swing.JButton C9;
-    private javax.swing.JButton jButton14;
+    private javax.swing.JButton J1;
+    private javax.swing.JButton J10;
+    private javax.swing.JButton J11;
+    private javax.swing.JButton J12;
+    private javax.swing.JButton J13;
+    private javax.swing.JButton J14;
+    private javax.swing.JButton J15;
+    private javax.swing.JButton J16;
+    private javax.swing.JButton J17;
+    private javax.swing.JButton J18;
+    private javax.swing.JButton J19;
+    private javax.swing.JButton J2;
+    private javax.swing.JButton J20;
+    private javax.swing.JButton J21;
+    private javax.swing.JButton J22;
+    private javax.swing.JButton J23;
+    private javax.swing.JButton J24;
+    private javax.swing.JButton J25;
+    private javax.swing.JButton J26;
+    private javax.swing.JButton J27;
+    private javax.swing.JButton J3;
+    private javax.swing.JButton J4;
+    private javax.swing.JButton J5;
+    private javax.swing.JButton J6;
+    private javax.swing.JButton J7;
+    private javax.swing.JButton J8;
+    private javax.swing.JButton J9;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
