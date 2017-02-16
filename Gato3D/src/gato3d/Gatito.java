@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author oriente
@@ -22,10 +24,15 @@ public class Gatito extends javax.swing.JFrame {
     int jugador2[]=new int[30];
     int ind1=0;
     int ind2=0;
+    int contJovas=0;
     File archivo=new File("JugadasGanadas.txt");
     String saludo=" "; //le puse saludo porque fue el de prueba xD 
     int mat[][]=new int[205][205];
     int t=0,maquina=0;
+    int vec[]=new int[100];
+    int dec2=0;
+    int uni2=0;
+    int numtemp;
     /**
      * Creates new form Gatito
      */
@@ -33,6 +40,8 @@ public class Gatito extends javax.swing.JFrame {
         initComponents();
         for(int i=0;i<30;i++)
             pos[i]=0;
+        LeeFichero();
+        
     }
     
         /**
@@ -342,15 +351,14 @@ public class Gatito extends javax.swing.JFrame {
 
     
     private void Compu_vs_humano(){
-        mat[0][0]=7; mat[0][1]=4; mat[0][2]=1; mat[0][3]=6;
-        mat[1][0]=3; mat[1][1]=6; mat[1][2]=9; mat[1][3]=12;
-        int vec[]=new int[30];
-        vec[0]=1; vec[1]=4; vec[2]=7; vec[3]=6; vec[4]=3; vec[5]=9;  //vector temporal prueba
-        while(vec[t]!=0 && pos[vec[t]]>0)
+        //vec[0]=1; vec[1]=4; vec[2]=7; vec[3]=6; vec[4]=3; vec[5]=9;  //vector temporal prueba
+        while(vec[t]!=0 && pos[vec[t]]>0)  //Recorre el vector para evitar las casillas que esten ocupadas
             t++;
         if(vec[t]==0) { //Si ya se acabaron las jugadas, juega random
+            vec[t]= (int) (Math.random() * 27) + 1;
+            System.out.println(" "+vec[t]);
         }
-        else { // Pon la jugada que sigue en el vector de jugadas
+        // Pon la jugada que sigue en el vector de jugadas
             if(vec[t]==1) {  J1.setText("O"); J1.setEnabled(false); }
             if(vec[t]==2) {  J2.setText("O"); J2.setEnabled(false); } 
             if(vec[t]==3) {  J3.setText("O"); J3.setEnabled(false); }
@@ -382,7 +390,7 @@ public class Gatito extends javax.swing.JFrame {
             jugador2[ind2++]=vec[t];
             checar_ganador();
             t++;
-        }
+        
     }
  //funcion, esta funcion se manda a llamar en guardar ganador 
     private void GuardarTxt(){
@@ -413,8 +421,9 @@ public class Gatito extends javax.swing.JFrame {
         File archivo = null;
         FileReader fr = null;
         BufferedReader br = null;
-
+        int numero=0;
         try {
+            String linea;
              // Apertura del fichero y creacion de BufferedReader para poder
             // hacer una lectura comoda (disponer del metodo readLine()).
             archivo = new File ("JugadasGanadas.txt");
@@ -422,9 +431,42 @@ public class Gatito extends javax.swing.JFrame {
              br = new BufferedReader(fr);
          System.out.println("Leyendo desde archivo");
          // Lectura del fichero
-         String linea;
-         while((linea=br.readLine())!=null)      // imprime lo que haya en el archivo
-            System.out.println(linea);
+         
+         int i=0,k=0,dec=0,uni=0,j=1;
+         while((linea=br.readLine())!=null)
+                contJovas++;
+            numero = (int) (Math.random() * contJovas) + 1;
+            numtemp=numero;
+            System.out.print("holi");
+            
+            archivo = new File ("JugadasGanadas.txt");
+            fr = new FileReader (archivo);
+            br = new BufferedReader(fr);
+            
+         while((linea=br.readLine())!=null) {     // imprime lo que haya en el archivo
+            //System.out.println(linea);
+            //contJovas++;
+            System.out.print("holoooo");
+            if(j<contJovas){
+                j++;
+            }
+            else{
+            while(i<linea.length()) {
+                if(linea.charAt(i)!=' ' && i+1<linea.length() && linea.charAt(i+1)==' '){
+                    vec[k++]=Character.getNumericValue(linea.charAt(i));
+                    i++;
+                }
+                else if(linea.charAt(i)!=' ' && i+1<linea.length() && linea.charAt(i+1)!=' '){
+                    dec=Character.getNumericValue(linea.charAt(i));
+                    uni=Character.getNumericValue(linea.charAt(i+1));
+                    vec[k++]=(dec*10)+uni;
+                    i+=2;
+                }
+                else i++;
+                }
+                j=contJovas+1;
+            }
+         } 
       }
       catch(Exception e){
          e.printStackTrace();
@@ -440,7 +482,71 @@ public class Gatito extends javax.swing.JFrame {
             e2.printStackTrace();
          }
       }
+        System.out.println("\nEl numero aleatorio fue: "+numtemp+" y cont jovas es: "+contJovas+"\n");
+      //for(int i=0;i<30;i++)
+      //    System.out.print(" "+vec[i]);
+      //EligeJugada();
 }
+    /*public void EligeJugada(){
+        int j=1;
+        int k=0;
+        int l=0;
+        int numero;
+        File archivo2 = null;
+        FileReader fr2 = null;
+        BufferedReader br2 = null;
+        
+        try {
+            archivo2 = new File ("JugadasGanadas.txt");
+            fr2 = new FileReader (archivo2);
+             br2 = new BufferedReader(fr2);
+             String linea2;
+             while((linea2=br2.readLine())!=null)
+                contJovas++;
+            numero = (int) (Math.random() * contJovas) + 1;
+            numtemp=numero;
+            while((linea2=br2.readLine())!=null){
+                if(j<numero){
+                    j++;
+                }
+                else{
+                    while(k<linea2.length()){
+                        if(linea2.charAt(k)!=' ' && k+1<linea2.length() && linea2.charAt(k+1)==' '){
+                    vec[l++]=Character.getNumericValue(linea2.charAt(k));
+                    k++;
+                }
+                else if(linea2.charAt(k)!=' ' && k+1<linea2.length() && linea2.charAt(k+1)!=' '){
+                    dec2=Character.getNumericValue(linea2.charAt(k));
+                    uni2=Character.getNumericValue(linea2.charAt(k+1));
+                    vec[l++]=(dec2*10)+uni2;
+                    k+=2;
+                }
+                else k++;   
+                 }
+                    
+                }
+            }
+            
+        } 
+              catch(Exception e){
+         e.printStackTrace();
+      }finally{
+         // En el finally cerramos el fichero, para asegurarnos
+         // que se cierra tanto si todo va bien como si salta 
+         // una excepcion.
+         try{                    
+            if( null != fr2 ){   
+               fr2.close();     
+            }                  
+         }catch (Exception e2){ 
+            e2.printStackTrace();
+         }
+      }
+        System.out.println("\nEl numero aleatorio fue: "+numtemp+" y cont jovas es: "+contJovas+"\n");
+        for(int i=0;i<30;i++)
+          System.out.print(" "+vec[i]);
+    }*/
+    
     public void deshabilita(){
         J1.setEnabled(false);
         J2.setEnabled(false);
